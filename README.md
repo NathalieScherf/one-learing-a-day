@@ -13,6 +13,11 @@ An AI-powered web app that generates personalized learning tasks and provides co
 - Clean, responsive UI with React and Tailwind CSS  
 - Structured JSON feedback for easy integration  
 
+## Visuals
+
+![](./images/step1.png)
+![](./images/step2.png)
+![](./images/step3.png)
 
 ### TO DOs
 
@@ -26,17 +31,19 @@ The app is currently requesting mock data in dev mode
 #### Deployment changes
 
 
-Step 12: Deployment Options
-Option 1: Vercel (Recommended)
+##### Option 1: Vercel (Recommended)
 Vercel supports both frontend and API routes out of the box.
 
 Move your API functions to api/ directory in Vercel format:
+
+```plaintext 
 api/
 ├── generate-task.js
 └── provide-feedback.js
-
+```
 Convert to Vercel serverless format:
-javascript// api/generate-task.js
+``` javascript// api/generate-task.js
+
 import axios from 'axios';
 
 export default async function handler(req, res) {
@@ -52,9 +59,13 @@ export default async function handler(req, res) {
   }
 }
 
+```
 Deploy:
-bashnpm install -g vercel
+
+``` bashnpm 
+install -g vercel
 vercel --prod
+```
 ---
 
 ## 🛠 Tech Stack
