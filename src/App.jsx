@@ -18,9 +18,7 @@ function App() {
   };
 
   const handleSolutionSubmit = async (solution, file) => {
-    const generatedFeedback = await provideFeedback(task, solution);
-    console.log(generatedFeedback);
-    
+    const generatedFeedback = await provideFeedback(task, solution);    
     setFeedback(generatedFeedback);
     setCurrentPage('feedback');
   };
