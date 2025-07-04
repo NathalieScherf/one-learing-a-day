@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import StartPage from './components/StartPage';
-import TaskPage from './components/TaskPage';
-import FeedbackPage from './components/FeedbackPage';
+import StartPage from './pages/StartPage';
+import TaskPage from './pages/TaskPage';
+import FeedbackPage from './pages/FeedbackPage';
 import { generateLearningTask, provideFeedback } from './services/openai';
 
 function App() {

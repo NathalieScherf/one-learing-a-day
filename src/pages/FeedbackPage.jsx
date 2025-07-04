@@ -14,9 +14,10 @@ const FeedbackPage = ({ feedback, onStartNew }) => {
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6 mb-8">
             <div className="prose max-w-none">
               <div className="whitespace-pre-wrap text-gray-700 leading-relaxed">
+                <p>{feedback.motivation}</p>
+
                 <p>
                 {feedback.feedback}</p>
-                <p>{feedback.motivation}</p>
                 <p>Next topics:</p>
                 <ul>{feedback.nextTopics.map((topic, index) => <li key={index}>{topic}</li>)}</ul>
               </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { validateSolution } from '../utils/validation';
-import MarkdownRenderer from './MarkdownRenderer';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 
 const TaskPage = ({ task, formData, onSubmitSolution, onBack }) => {
   const [solution, setSolution] = useState('');
