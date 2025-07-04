@@ -2,12 +2,13 @@ import validator from 'validator';
 
 export const validateStartPageInput = (topic, level, timeLimit) => {
   const errors = {};
+  topic = topic ? validator.escape(topic).trim() : '';
 
-  if (!topic || topic.trim().length === 0) {
+  if (topic.length === 0) {
     errors.topic = 'Topic is required';
-  } else if (topic.trim().length < 3) {
+  } else if (topic.length < 3) {
     errors.topic = 'Topic must be at least 3 characters';
-  } else if (topic.trim().length > 100) {
+  } else if (topic.length > 100) {
     errors.topic = 'Topic must be less than 100 characters';
   }
 
@@ -20,6 +21,7 @@ export const validateStartPageInput = (topic, level, timeLimit) => {
   }
 
   return {
+    topic,
     isValid: Object.keys(errors).length === 0,
     errors
   };
@@ -27,10 +29,11 @@ export const validateStartPageInput = (topic, level, timeLimit) => {
 
 export const validateSolution = (solution) => {
   const errors = {};
+  solution = solution ? solution.trim() : '';
 
-  if (!solution || solution.trim().length === 0) {
+  if (solution.length === 0) {
     errors.solution = 'Solution is required';
-  } else if (solution.trim().length < 10) {
+  } else if (solution.length < 10) {
     errors.solution = 'Solution must be at least 10 characters';
   }
 
