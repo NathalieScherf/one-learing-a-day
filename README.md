@@ -18,7 +18,10 @@ An AI-powered web app that generates personalized learning tasks and provides co
 
 The app is currently requesting mock data in dev mode
 
-- [] add api key for open ai
+- [ ] add api key for open ai
+- [ ] figure out best way to connect to open ai
+- [ ] figure out my payment for open ai 
+- [ ] add payment for users to pay for requests
 
 #### Deployment changes
 
