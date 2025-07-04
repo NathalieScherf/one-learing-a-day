@@ -17,6 +17,41 @@ An AI-powered web app that generates personalized learning tasks and provides co
 ### TO DOs
 
 The app is currently requesting mock data in dev mode
+
+- [] add api key for open ai
+
+#### Deployment changes
+
+
+Step 12: Deployment Options
+Option 1: Vercel (Recommended)
+Vercel supports both frontend and API routes out of the box.
+
+Move your API functions to api/ directory in Vercel format:
+api/
+├── generate-task.js
+└── provide-feedback.js
+
+Convert to Vercel serverless format:
+javascript// api/generate-task.js
+import axios from 'axios';
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    const { topic, level, timeLimit } = req.body;
+    // ... rest of your logic
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to generate learning task' });
+  }
+}
+
+Deploy:
+bashnpm install -g vercel
+vercel --prod
 ---
 
 ## 🛠 Tech Stack

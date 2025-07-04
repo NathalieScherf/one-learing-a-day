@@ -2,7 +2,7 @@ import { useState } from 'react';
 import StartPage from './pages/StartPage';
 import TaskPage from './pages/TaskPage';
 import FeedbackPage from './pages/FeedbackPage';
-import { generateLearningTask, provideFeedback } from './services/openai';
+import { generateLearningTask, provideFeedback } from './services/api';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('start');
