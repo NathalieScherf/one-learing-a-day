@@ -22,7 +22,7 @@ export const provideFeedbackHandler = async (req, res) => {
         messages: [
           {
             role: 'system',
-            content: 'You are a supportive learning coach. Provide constructive feedback, encouragement, and suggest next learning steps.Always respond in valid JSON using double quotes for keys and string values. Do not include Markdown.'
+            content: 'You are a supportive learning coach. Provide constructive feedback, encouragement, and suggest next learning steps. Always respond in valid JSON using double quotes for keys and string values. Do not include Markdown.'
           },
           {
             role: 'user',

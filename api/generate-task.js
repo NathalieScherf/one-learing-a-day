@@ -24,7 +24,7 @@ export const generateTaskHandler = async (req, res) => {
       messages: [
         {
           role: 'system',
-          content: 'You are a helpful learning assistant that creates engaging, practical learning tasks.Respond with a JSON object containing the task, instructions, and expected outcomes as fields.'
+          content: 'You are a helpful learning assistant that creates engaging, practical learning tasks. Respond with a JSON object containing the task, instructions, and expected outcomes as fields.'
         },
         {
           role: 'user',
