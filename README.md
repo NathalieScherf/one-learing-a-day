@@ -19,27 +19,26 @@ An AI-powered web app that generates personalized learning tasks and provides co
 ![](./images/step2.png)
 ![](./images/step3.png)
 
-### TO DOs
+## TO DOs
 
 The app is currently requesting mock data in dev mode
+###  Set up
+- [ ] add api key for ai connection
+- [ ] replace mocked data in task with AI connection in the api
+- [ ] replace mocked data in feedback with AI connection in the api
 
-- [ ] add api key for open ai
-- [ ] figure out best way to connect to open ai
-- [ ] figure out my payment for open ai 
+### Roadmap: Features to add
+- [ ] Create user accounts
+- [ ] Create a learning log for each user
+- [ ] Add a calendar view for users to see their daily learning
+- [ ] Recap mode: Allow the user to revisit earlier topics and see their responses and feedback
+- [ ] Recall mode: Allow users to select topics to practice recall on with quizzes or tasks generated and reviewed by AI. 
 - [ ] add payment for users to pay for requests
 
-#### Deployment changes
+### Deployment changes
 
+#### Adapt for Vercel 
 
-##### Option 1: Vercel (Recommended)
-Vercel supports both frontend and API routes out of the box.
-
-Move your API functions to api/ directory in Vercel format:
-
-```plaintext 
-api/
-├── generate-task.js
-└── provide-feedback.js
 ```
 Convert to Vercel serverless format:
 ``` javascript// api/generate-task.js
@@ -60,7 +59,7 @@ export default async function handler(req, res) {
 }
 
 ```
-Deploy:
+#### Deploy:
 
 ``` bashnpm 
 install -g vercel
@@ -98,7 +97,7 @@ my-app/
 │
 ├── .env# Environment variables (OPENAI_API_KEY, MODE)
 ├── vite.config.js # Vite config file
-├── LICENSE # License file (Creative Commons BY-NC 4.0)
+├── LICENSE # License file (MIT)
 └── README.md # This documentation file
 ``` 
 
@@ -106,7 +105,7 @@ my-app/
 
 ## 🔧 Getting Started
 
-### Prerequisites
+### Prerequisites for usage at the moment
 
 - Node.js (v24 or higher recommended)
 - OpenAI API Key ([Sign up here](https://platform.openai.com/account/api-keys))
@@ -165,16 +164,13 @@ This app is designed for deployment on Vercel.
 
 ## License
 
-This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+This project is licensed under the [MIT]
+Copyright (c) 2026 [Nathalie Abendroth Scherf](https://github.com/NathalieScherf/).
 
-You may:
 
-- ✅ Use the code for **personal**, **educational**, or **non-commercial** purposes
-- ✅ Modify, adapt, and share it **with attribution** to [Nathalie Abendroth Scherf](https://github.com/NathalieScherf/).
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-You may **not**:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-- ❌ Use it for **commercial purposes**
-- ❌ Sell or redistribute it in paid services or products
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-If you're unsure whether your use case qualifies, please contact the author [Nathalie Abendroth Scherf](https://github.com/NathalieScherf/).

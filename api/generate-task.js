@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
-import { mockDataResponse } from './mockdata.js' // Import mock data for development
+import { mockDataResponse } from './mockdata.js' //  mock data for development
 
 export const generateTaskHandler = async (req, res) => {
   try {
